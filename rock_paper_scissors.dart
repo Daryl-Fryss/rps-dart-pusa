@@ -2,7 +2,7 @@ import 'dart:io';
 
 final List<String> validMoves = ['rock', 'paper', 'scissors'];
 
-/// Asks for a player's name, will use default if nothing is entered.
+/// Asks for a player's name and will use default if nothing is entered.
 String getPlayerName(int number) {
   stdout.write('Enter Player $number name: ');
   String? input = stdin.readLineSync()?.trim();
@@ -19,7 +19,7 @@ String? validateMove(String? input) {
   return validMoves.contains(move) ? move : null;
 }
 
-/// Keeps asking a player for a move until a valid one is entered.
+/// Keeps asking a player for a move until a valid one is inputted.
 String getMove(String name) {
   String? move;
   do {
